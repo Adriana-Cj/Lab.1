@@ -94,7 +94,7 @@ In cazul dat, masina cu ID-ul 1 nu exista.
 
 **201 Created** - Cererea POST trimisa creează o noua masina în sistem si serverul confirma crearea resursei.
 
-**400 Bad Request** - Daca trimitem un corp al cererii incomplet sau nevalid, cum ar fi fara campurile make, model, sau year.
+**400 Bad Request** - Daca trimitem un corp al cererii incomplet sau nevalid.
 
 **401 Unauthorized** - Daca incercam să facem o cerere fara sa fim autentificat sau fara token de acces corespunzator.
 
