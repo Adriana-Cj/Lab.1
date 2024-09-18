@@ -1,6 +1,6 @@
 # Lucrare de laborator nr. 1. Bazele HTTP
 
-### Scop
+### Scopul lucrarii
 Scopul acestei lucrări de laborator este studierea principiilor de bază ale protocolului HTTP, prin analizarea cererilor HTTP și crearea unor cereri HTTP specifice.
 
 ### Descrierea lucrarii individuale
@@ -63,7 +63,8 @@ Aceasta lucrare de laborator se bazează pe analiza cererilor și răspunsurilor
 ## Sarcina nr. 2. Crearea cererilor HTTP
 #### 1. Scriem o cerere de tip GET către server la adresa http://sandbox.com, indicând în antetul User-Agent numele și prenumele nostru:
 
-![image](https://github.com/user-attachments/assets/00c58a27-489a-465d-8858-a76ac5ce65b8)
+![image](https://github.com/user-attachments/assets/96e69e59-35ee-47de-969b-646c21bfa316)
+
 
 #### 2. Scriem o cerere de tip POST către server la adresa http://sandbox.com/cars, indicând în corpul cererii parametri: make: Toyota, model: Corolla, year: 2020
 ![image](https://github.com/user-attachments/assets/15bbf8d5-95b6-4895-af6a-2084976b052e)
@@ -76,7 +77,8 @@ Daca totul este corect, masina Toyota Corolla 2020 va fi adaugata pe server.
 ![image](https://github.com/user-attachments/assets/7f66f276-85c0-462f-89c9-b435897c82cb)
 Prin aceasta cerere PUT, actualizam masina cu ID-ul 1 pentru a reflecta faptul că este un model Toyota Corolla din anul 2021.
 Daca masina cu ID-ul 1 nu exista, serverul ar putea returna codul 404 Not Found, semnaland că resursa nu a fost gasită.
-![image](https://github.com/user-attachments/assets/41f84d4c-2c45-4da6-8059-a27f75883685)
+![image](https://github.com/user-attachments/assets/67f04e7d-71c9-454d-bb04-a2823d4a564e)
+
 In cazul dat, masina cu ID-ul 1 nu exista.
 
 
@@ -107,14 +109,7 @@ In cazul dat, masina cu ID-ul 1 nu exista.
 
 
 #### 5. Scriem o cerere de tip DELETE la alegere. De ce, în acest caz, este potrivit să utilizam metoda DELETE?
-![image](https://github.com/user-attachments/assets/7cf0e83f-8aca-4137-9f86-0d4b7f58a5ba)
-
-Aceasta cerere trimite o solicitare de stergere a resursei asociate cu masina care are ID-ul 1 de pe serverul sandbox.com.
-
-DELETE /cars/1 HTTP/1.1
-Host: sandbox.com
-User-Agent: John Doe
-Content-Type: application/json
+![image](https://github.com/user-attachments/assets/685290c4-510d-4f9e-b84c-fccebd6b6339)
 
 Metoda DELETE este utilizata pentru a solicita stergerea unei resurse de pe server. În acest caz, vrem sa eliminăm masina cu ID-ul 1 din baza de date sau din sistemul de gestionare a masinilor.
 
@@ -139,12 +134,12 @@ Este potrivit să folosim DELETE atunci când intentia este să îndepartam defi
 
 
 ### Răspunsuri la întrebările de control
-#### Ce este protocolul HTTP?
+#### 1. Ce este protocolul HTTP?
 HTTP este un protocol pentru transferul de hipertext, adică un ansamblu de reguli care stabilesc cum se realizeaza schimbul de date între un client și un server. 
 Un protocol este un set de reguli și conventii care reglementează modul în care dispozitivele comunică între ele. În cazul HTTP, acesta defineste modul în care clientul și serverul interactioneaza pentru a face schimb de informatii.
-#### Pentru ce folosim antetul **User-Agent**?
+#### 2. Pentru ce folosim antetul **User-Agent**?
 Antetul User-Agent este un antet dintr-o cerere HTTP care ofera informatii despre aplicația client care face cererea, cum ar fi tipul și versiunea browserului sau sistemul de operare. Serverele pot folosi acest antet pentru a personaliza raspunsurile în functie de client sau pentru a înregistra detalii despre dispozitivul care acceseaza resursele.
-#### Care este diferența dintre metodele **PUT** și **PATCH**?
+#### 3. Care este diferența dintre metodele **PUT** și **PATCH**?
 
 **PUT**:
  - Se foloseste pentru a înlocui complet o resursa de pe server. Când trimitem o cerere PUT, datele existente sunt șterse și înlocuite cu cele noi. 
@@ -153,6 +148,9 @@ Antetul User-Agent este un antet dintr-o cerere HTTP care ofera informatii despr
 **PATCH**:
  - Se foloseste pentru a modifica parțial o resursă de pe server. Cu PATCH, nu trebuie să trimitem o reprezentare completa a resursei, ci doar campurile pe care dorim să le actualizam.
  - Este util atunci când avem de făcut doar o mica modificare fara a afecta întreaga resursa.
+
+### Concluzii
+Această lucrare a demonstrat importanța înțelegerii cererilor și răspunsurilor HTTP în contextul interacțiunilor web. Fiecare metodă HTTP are un rol specific în comunicarea client-server, iar analiza detaliată a cererilor și răspunsurilor ne permite să diagnosticăm și să rezolvăm problemele eficient. Utilizarea corectă a metodelor HTTP și a codurilor de stare este esențială pentru dezvoltarea și întreținerea aplicațiilor web funcționale.
 
 ### Lista surselor utilizate
  - https://moodle.usm.md/pluginfile.php/727758/mod_resource/content/1/Client-Server.%20Ce%20este%20HTTP_.pdf
